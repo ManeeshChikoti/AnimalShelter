@@ -1,0 +1,97 @@
+.formWrapper {
+  .formContainer {
+    background-color: #a1d0e4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 100vh;
+    margin: 0px 10%;
+     width: 80%;
+     overflow: auto;
+    position: absolute;
+    z-index: 7;
+    @media screen and (max-width: 600px) {
+        margin:0px; 
+        width: 100vw;
+      }
+  }
+  .closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @media screen and (max-width: 600px) {
+      padding: 3px;
+      top: 3px;
+    }
+  }
+  h3 {
+    font-size: 32px;
+    padding-top: 20px;
+    padding-left: 32px;
+    color: rgba(0, 0, 0, 0.7);
+    @media screen and (max-width: 600px) {
+      font-size: 24px;
+      padding-left: 10px;
+      padding-top: 30px;
+    }
+  }
+  select,
+  input {
+    width: 326px;
+    height: 56px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding-left: 5px;
+    @media screen and (max-width: 600px) {
+      width: 250px;
+      }
+
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+  .addItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+
+    label {
+      padding: 10px 0px;
+      span {
+        color: red;
+      }
+    }
+  }
+  .buttonWrap{
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0px;
+    margin-right: 20px;
+    @media screen and (max-width: 600px) {
+       justify-content: center;
+      }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 284px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background: #ff6584;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+}
+}

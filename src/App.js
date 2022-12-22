@@ -1,25 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from './pages/home/Home';
+import Contact from './pages/contact/Contact';
 
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/contact",
+    element: <Contact />
+  },{
+    path:"*",
+    element:(
+      <div  style={{display:"flex",flexDirection:"column",height:"100vh", alignItems:" center",padding:"20px"}}>
+        <h2>404</h2>
+        <h2>The Page you are looking for doesnot exist.</h2>
+      </div>
+    )
+  }
+])
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <RouterProvider router={router} />
+    </>
+  )
 }
 
 export default App;
